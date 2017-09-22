@@ -56,10 +56,8 @@ int main() {
     std::cin >> bx;
     std::cout << "Then enter B(y) ";
     std::cin >> by;
-    length_btw_a_b = sqrt(pow((bx-ax), 2) - pow((by-ay), 2));
+    length_btw_a_b = sqrt(pow((bx-ax), 2) + pow((by-ay), 2));
     std::cout << "The length between A(x, y) and B(x, y) is " << length_btw_a_b << std::endl;
 ///////////////////////////////////////////
-
-
     return 0;
 }
