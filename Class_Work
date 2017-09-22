@@ -1,0 +1,12 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+int main() {
+    double digit;
+    digit = M_PI;
+    digit = ((int)(digit*100 + 0.5))/100.0;
+	std::cout << digit << std::endl;
+	return 0;
+}
