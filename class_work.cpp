@@ -17,7 +17,8 @@ int main() {
     setted_string = '_';
     std::cout << "1" << setted_string << "13" << setted_string << "49" << std::endl;
 ///////////////////////////////////////////
-    std::cout << random() % 200 + 1 << "  " << random() % 200 + 1 << "  " << random() % 200 + 1 << std::endl;
+    std::cout << random() % 200 + 1 << "  " <<
+              random() % 200 + 1 << "  " << random() % 200 + 1 << std::endl;
 ///////////////////////////////////////////
     double a, x, y;
     std::cout << "Then enter 'A' ";
