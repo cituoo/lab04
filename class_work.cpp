@@ -1,14 +1,13 @@
 #include <iostream>
-#include <math.h>
-#include <stdlib.h>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 
 int main() {
     double digit;
     digit = M_PI;
-    digit = ((int)(digit*100 + 0.5))/100.0;
-    std::cout << digit << std::endl;
+    std::cout << std::setprecision(3) << digit << std::endl;
 ///////////////////////////////////////////
     std::cout << "1 13 49" << std::endl;
 ///////////////////////////////////////////
@@ -16,6 +15,7 @@ int main() {
     setted_string = '_';
     std::cout << "1" << setted_string << "13" << setted_string << "49" << std::endl;
 ///////////////////////////////////////////
+    std::srand(unsigned(std::time(0)));
     std::cout << rand() << "  " << rand() << "  " << rand() << std::endl;
 ///////////////////////////////////////////
     double a, x, y;
