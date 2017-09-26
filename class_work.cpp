@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <random>
+
 using namespace std;
 
 
@@ -15,8 +17,10 @@ int main() {
     setted_string = '_';
     std::cout << "1" << setted_string << "13" << setted_string << "49" << std::endl;
 ///////////////////////////////////////////
-    std::srand(unsigned(std::time(0)));
-    std::cout << rand() << "  " << rand() << "  " << rand() << std::endl;
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_real_distribution<double> dist(1.0, 10.0);
+    std::cout << dist(mt) << "  " << dist(mt) << "  " << dist(mt) << std::endl;
 ///////////////////////////////////////////
     double a, x, y;
     std::cout << "Then enter 'A' ";
