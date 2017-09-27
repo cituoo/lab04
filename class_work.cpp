@@ -76,7 +76,8 @@ int main() {
     std::cin >> r_big;
     std::cout << "Then enter r ";
     std::cin >> r_small;
-    std::cout << "The S is " << std::setprecision(3) << M_PI * pow(r_big, 2) - M_PI * pow(r_small, 2) << std::endl;
+    std::cout << "The S is " << std::setprecision(3) <<
+                  M_PI * pow(r_big, 2) - M_PI * pow(r_small, 2) << std::endl;
 ////////////////////////////////////////////
     double s;
     std::cout << "Then enter side of square ";
