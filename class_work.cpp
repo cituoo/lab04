@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include <random>
 
 using namespace std;
 
@@ -60,5 +59,44 @@ int main() {
     length_btw_a_b = sqrt(pow((bx-ax), 2) + pow((by-ay), 2));
     std::cout << "The length between A(x, y) and B(x, y) is " << length_btw_a_b << std::endl;
 ///////////////////////////////////////////
+    double h, p, c;
+    std::cout << "Then enter first side ";
+    std::cin >> a;
+    std::cout << "Then enter second side ";
+    std::cin >> b;
+    std::cout << "Then enter hight ";
+    std::cin >> h;
+    c = abs(a-b)/2;
+    c = sqrt(pow(c, 2) + pow(h, 2));
+    p = c * 2 + a + b;
+    std::cout << "The perimeter is " << std::setprecision(3) << p << std::endl;
+////////////////////////////////////////////
+    double r_big, r_small;
+    std::cout << "Then enter R ";
+    std::cin >> r_big;
+    std::cout << "Then enter r ";
+    std::cin >> r_small;
+    std::cout << "The S is " << std::setprecision(3) << M_PI * pow(r_big, 2) - M_PI * pow(r_small, 2) << std::endl;
+////////////////////////////////////////////
+    double s;
+    std::cout << "Then enter side of square ";
+    std::cin >> a;
+    v = pow(a, 3);
+    s = 4 * pow(a, 2);
+    std::cout << "The v is " << v << ". The s is " << s << std::endl;
+/////////////////////////////////////////////
+    std::cout << "Then enter side of square ";
+    std::cin >> a;
+    p = 4 * a;
+    std::cout << "The P is "<< p << std::endl;
+/////////////////////////////////////////////
+    std::cout << "Then enter r of circle ";
+    std::cin >> a;
+    p = 2 * a;
+    std::cout << "The d is "<< p << std::endl;
+/////////////////////////////////////////////
+
+
+
     return 0;
 }
