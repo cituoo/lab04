@@ -27,11 +27,7 @@ int main() {
 
 // Вывод трех любых чисел с двумя пробелами между ними:
 // Как в с++ делать рэндом?(трэвис ругается на rand())
-    std::default_random_engine generator;
-    std::uniform_int_distribution<int> distribution(-100, 100);
-    std::cout << "4) " << distribution(generator) << "  " <<
-                          distribution(generator) << "  " <<
-                          distribution(generator) << std::endl;
+    std::cout << "4) " << "21  42  47" << std::endl;
     std::cout << "--" << std::endl;
 
 // Вычисление значения функции1:
