@@ -1,103 +1,139 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <random>
 
 using namespace std;
 
 
 int main() {
-    double digit;
-    digit = M_PI;
-    std::cout << std::setprecision(3) << digit << std::endl;
-///////////////////////////////////////////
-    std::cout << "1 13 49" << std::endl;
-///////////////////////////////////////////
-    char setted_string;
-    setted_string = '_';
-    std::cout << "1" << setted_string << "13" << setted_string << "49" << std::endl;
-///////////////////////////////////////////
-    std::cout << "21  42  47" << std::endl;
-///////////////////////////////////////////
-    double a, x, y;
-    std::cout << "Then enter 'A' ";
+
+// Вывод числа Пи, округленного до сотых:
+    double roundNumPi;
+    roundNumPi = M_PI;
+    std::cout << "1) Number pi rounded to hundredths:" << std::setprecision(3) << roundNumPi << std::endl;
+    std::cout << "--" << std::endl;
+
+// Вывод чисел 1/13/49 c одним пробелом между ними:
+    std::cout << "2) 1 13 49" << std::endl;
+    std::cout << "--" << std::endl;
+
+// Вывод чисел 1/13/49 разделенные заданым символом:
+    char settedString;
+    std::cout << "Enter the delimiter: ";
+    std::cin >> settedString;
+    std::cout << "3) 1" << settedString << "13" << settedString << "49" << std::endl;
+    std::cout << "--" << std::endl;
+
+// Вывод трех любых чисел с двумя пробелами между ними:
+    std::default_random_engine generator;
+    std::uniform_int_distribution<int> distribution(-100, 100);
+    std::cout << "4) " << distribution(generator) << "  " << distribution(generator) << "  " << distribution(generator) << std::endl;
+    std::cout << "--" << std::endl;
+
+// Вычисление значения функции1:
+    double a;
+    std::cout << "Enter the changeable parameter 'a': ";
     std::cin >> a;
-    x = pow((12*a), 2) + 7*a - 12;
-    std::cout << "x = " << x << std::endl;
-///////////////////////////////////////////
-    x = 0;
-    std::cout << "Then enter 'X' ";
+    double x;
+    x = 12*pow(a, 2) + 7*a - 12;
+    std::cout << "5) Value of 'x = 12"<< a << "^2 - 7" << a << " - 12' is: "<< x << std::endl;
+// Вычисление значения функции2:
+    std::cout << "Enter the changeable parameter 'х': ";
     std::cin >> x;
-    y = pow((3*x), 3) + pow((4*x), 3) - 11*x + 1;
-    std::cout << "y = " << x << std::endl;
-///////////////////////////////////////////
-    double v, m;
-    std::cout << "Then enter volume ";
-    std::cin >> v;
-    std::cout << "Then enter weight ";
-    std::cin >> m;
-    std::cout << "density is " << m*v << std::endl;
-///////////////////////////////////////////
-    double b;
-    a = 0;
-    x = 0;
-    std::cout << "Then enter first argument 'a' ";
+    double y;
+    y = 3*pow(x, 3) + 4*pow(x, 3) - 11*x + 1;
+    std::cout << "5) Value of 'y = 3"<< x <<"^3 + 4" << x << "^2 + 1' is: " << y << std::endl;
+    std::cout << "--" << std::endl;
+
+// Определение плотности по объему и массе:
+    double volume, weight;
+    std::cout << "Enter volume: ";
+    std::cin >> volume;
+    std::cout << "Enter weight: ";
+    std::cin >> weight;
+    std::cout << "6) Body density is " << weight*volume << std::endl;
+    std::cout << "--" << std::endl;
+
+// Решение квадратного уравнения:
+    std::cout << "Then enter first argument 'a': ";
     std::cin >> a;
-    std::cout << "Then enter second argument 'b' ";
+    double b;
+    std::cout << "Then enter second argument 'b': ";
     std::cin >> b;
     x = (-b) / a;
-    std::cout << "Answer:" << x << std::endl;
-///////////////////////////////////////////
-    double ax, ay, bx, by, length_btw_a_b;
-    std::cout << "Then enter A(x) ";
+    std::cout << "7) The solution of equation '"<< a << "x + " << b << "' is: " << x << std::endl;
+    std::cout << "--" << std::endl;
+
+// Длина между двумя точками:
+    double ax;
+    std::cout << "Enter A(x): ";
     std::cin >> ax;
-    std::cout << "Then enter A(y) ";
+    double ay;
+    std::cout << "Enter A(y): ";
     std::cin >> ay;
-    std::cout << "Then enter B(x) ";
+    double bx;
+    std::cout << "Enter B(x): ";
     std::cin >> bx;
-    std::cout << "Then enter B(y) ";
+    double by;
+    std::cout << "Enter B(y): ";
     std::cin >> by;
-    length_btw_a_b = sqrt(pow((bx-ax), 2) + pow((by-ay), 2));
-    std::cout << "The length between A(x, y) and B(x, y) is " << length_btw_a_b << std::endl;
-///////////////////////////////////////////
-    double h, p, c;
-    std::cout << "Then enter first side ";
-    std::cin >> a;
-    std::cout << "Then enter second side ";
-    std::cin >> b;
-    std::cout << "Then enter hight ";
-    std::cin >> h;
-    c = abs(a-b)/2;
-    c = sqrt(pow(c, 2) + pow(h, 2));
-    p = c * 2 + a + b;
-    std::cout << "The perimeter is " << std::setprecision(3) << p << std::endl;
-////////////////////////////////////////////
-    double r_big, r_small;
-    std::cout << "Then enter R ";
-    std::cin >> r_big;
-    std::cout << "Then enter r ";
-    std::cin >> r_small;
-    std::cout << "The S is " << std::setprecision(3) <<
-                  M_PI * pow(r_big, 2) - M_PI * pow(r_small, 2) << std::endl;
-////////////////////////////////////////////
-    double s;
-    std::cout << "Then enter side of square ";
-    std::cin >> a;
-    v = pow(a, 3);
-    s = 4 * pow(a, 2);
-    std::cout << "The v is " << v << ". The s is " << s << std::endl;
-/////////////////////////////////////////////
-    std::cout << "Then enter side of square ";
-    std::cin >> a;
-    p = 4 * a;
-    std::cout << "The P is "<< p << std::endl;
-/////////////////////////////////////////////
-    std::cout << "Then enter r of circle ";
-    std::cin >> a;
-    p = 2 * a;
-    std::cout << "The d is "<< p << std::endl;
-/////////////////////////////////////////////
+    double lengthBtwAB;
+    lengthBtwAB = sqrt(pow((bx-ax), 2) + pow((by-ay), 2));
+    std::cout << "8) The length between A(x, y) and B(x, y) is: " << lengthBtwAB << std::endl;
+    std::cout << "--" << std::endl;
 
+// Нахождение периметра равнобедренной трапеции:
+    double firstSide;
+    std::cout << "Enter first side: ";
+    std::cin >> firstSide;
+    double secondSide;
+    std::cout << "Enter second side: ";
+    std::cin >> secondSide;
+    double height;
+    std::cout << "Enter height: ";
+    std::cin >> height;
+    double rib;
+    rib = abs(firstSide-secondSide)/2;
+    rib = sqrt(pow(rib, 2) + pow(height, 2));
+    double perimeter;
+    perimeter = rib * 2 + a + b;
+    std::cout << "9) The perimeter of an isosceles trapezoid is: " << std::setprecision(3) << perimeter << std::endl;
+    std::cout << "--" << std::endl;
 
+// Нахождение площади кольца:
+    double radiusBig;
+    std::cout << "Enter bigger R: ";
+    std::cin >> radiusBig;
+    double radiusSmall;
+    std::cout << "Enter smaller r: ";
+    std::cin >> radiusSmall;
+    std::cout << "10) The area of ring is: " << std::setprecision(3) <<
+              M_PI * pow(radiusBig, 2) - M_PI * pow(radiusSmall, 2) << std::endl;
+    std::cout << "--" << std::endl;
 
+// Нахождение объема квадрата:
+    double squareSide;
+    std::cout << "Enter side of square: ";
+    std::cin >> squareSide;
+    volume = pow(squareSide, 3);
+    double squareArea;
+    squareArea = 4 * pow(squareSide, 2);
+    std::cout << "11) The volume of square is: " << volume <<
+              ". Amd the area of the square is: " << squareArea << std::endl;
+    std::cout << "--" << std::endl;
+
+// Периметр квадрата:
+    std::cout << "Enter side of square: ";
+    std::cin >> squareSide;
+    std::cout << "12) The perimeter of the square is: "<< 4*squareSide << std::endl;
+    std::cout << "--" << std::endl;
+
+// Нахождение диаметра круга
+    double radiusCircle;
+    std::cout << "Enter r of circle: ";
+    std::cin >> radiusCircle;
+    std::cout << "13) The diameter of the circle is: "<< 2*radiusCircle << std::endl;
+    std::cout << "--" << std::endl;
     return 0;
 }
