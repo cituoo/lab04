@@ -7,11 +7,11 @@ using namespace std;
 
 
 int main() {
-
 // Вывод числа Пи, округленного до сотых:
     double roundNumPi;
     roundNumPi = M_PI;
-    std::cout << "1) Number pi rounded to hundredths:" << std::setprecision(3) << roundNumPi << std::endl;
+    std::cout << "1) Number pi rounded to hundredths:" <<
+                 std::setprecision(3) << roundNumPi << std::endl;
     std::cout << "--" << std::endl;
 
 // Вывод чисел 1/13/49 c одним пробелом между ними:
@@ -26,9 +26,12 @@ int main() {
     std::cout << "--" << std::endl;
 
 // Вывод трех любых чисел с двумя пробелами между ними:
+// Как в с++ делать рэндом?(трэвис ругается на rand())
     std::default_random_engine generator;
     std::uniform_int_distribution<int> distribution(-100, 100);
-    std::cout << "4) " << distribution(generator) << "  " << distribution(generator) << "  " << distribution(generator) << std::endl;
+    std::cout << "4) " << distribution(generator) << "  " <<
+                          distribution(generator) << "  " <<
+                          distribution(generator) << std::endl;
     std::cout << "--" << std::endl;
 
 // Вычисление значения функции1:
@@ -98,7 +101,8 @@ int main() {
     rib = sqrt(pow(rib, 2) + pow(height, 2));
     double perimeter;
     perimeter = rib * 2 + a + b;
-    std::cout << "9) The perimeter of an isosceles trapezoid is: " << std::setprecision(3) << perimeter << std::endl;
+    std::cout << "9) The perimeter of an isosceles trapezoid is: " <<
+                 std::setprecision(3) << perimeter << std::endl;
     std::cout << "--" << std::endl;
 
 // Нахождение площади кольца:
