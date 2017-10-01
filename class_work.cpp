@@ -102,8 +102,8 @@ int main() {
     std::cout << "" << std::endl;
 
 // chess 2
-    if (abs(attackingChessField.first - attackingChessField.second) ==
-        abs(pownedChessField.first - pownedChessField.second))
+    if (std::abs(attackingChessField.first - attackingChessField.second) ==
+        std::abs(pownedChessField.first - pownedChessField.second))
     {
         std::cout << "chess2) True." << std::endl;
     }
@@ -114,8 +114,8 @@ int main() {
     std::cout << "" << std::endl;
 
 // chess 3
-    if (abs((attackingChessField.first - pownedChessField.first) == 1) ||
-        (abs(attackingChessField.second - pownedChessField.second) == 1))
+    if (std::abs((attackingChessField.first - pownedChessField.first) == 1) ||
+        (std::abs(attackingChessField.second - pownedChessField.second) == 1))
     {
         std::cout << "chess3) True." << std::endl;
     }
@@ -128,8 +128,8 @@ int main() {
 // chess 4
     if (((attackingChessField.first == pownedChessField.first) ||
          (attackingChessField.second == pownedChessField.second)) ||
-        (abs(attackingChessField.first - attackingChessField.second) ==
-         abs(pownedChessField.first - pownedChessField.second)))
+         (std::abs(attackingChessField.first - attackingChessField.second) ==
+         std::abs(pownedChessField.first - pownedChessField.second)))
     {
         std::cout << "chess4) True." << std::endl;
     }
