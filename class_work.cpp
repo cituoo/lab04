@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 int main() {
 // initialization
     int x = 0;
@@ -22,7 +22,7 @@ int main() {
 
 // num2
     std::cout << "2) Only one number is less than 20:   ";
-    if ((x < 20)&&(y > 20)||(x > 20)&&(y < 20))
+    if ((x < 20) && (y > 20)||(x > 20) && (y < 20))
     {
         std::cout << "True." << std::endl;
     } else
@@ -33,7 +33,7 @@ int main() {
 
 // num3
     std::cout << "3) At least one of the numbers is 0:   ";
-    if ((x == 0)||(y == 0))
+    if ((x == 0) || (y == 0))
     {
         std::cout << "True." << std::endl;
     }
@@ -45,7 +45,7 @@ int main() {
 
 // num4
     std::cout << "4) Each of the numbers is negative:   ";
-    if ((x < 0)&&(y < 0)&&(z < 0))
+    if ((x < 0) && (y < 0) && (z < 0))
     {
         std::cout << "True." << std::endl;
     }
@@ -57,9 +57,9 @@ int main() {
 
 // num5
     std::cout << "5) Only one of the numbers is a multiple of five:   ";
-    if (((x % 5 == 0)&&(y % 5 != 0)&&(z % 5 != 0))||
-        ((x % 5 != 0)&&(y % 5 == 0)&&(z % 5 != 0))||
-        ((x % 5 == 0)&&(y % 5 == 0)&&(z % 5 != 0)))
+    if (((x % 5 == 0) && (y % 5 != 0) && (z % 5 != 0))||
+        ((x % 5 != 0) && (y % 5 == 0) && (z % 5 != 0))||
+        ((x % 5 == 0) && (y % 5 == 0) && (z % 5 != 0)))
     {
         std::cout << "True." << std::endl;
     }
@@ -71,7 +71,7 @@ int main() {
 
 // num6
     std::cout << "6) at least one of the numbers is greater than 100:   ";
-    if ((x > 100)||(y > 100)||(z > 100))
+    if ((x > 100) || (y > 100) || (z > 100))
     {
         std::cout << "True." << std::endl;
     }
@@ -114,7 +114,7 @@ int main() {
     std::cout << "" << std::endl;
 
 // chess 3
-    if (abs((attackingChessField.first - pownedChessField.first) == 1)||
+    if (abs((attackingChessField.first - pownedChessField.first) == 1) ||
         (abs(attackingChessField.second - pownedChessField.second) == 1))
     {
         std::cout << "chess3) True." << std::endl;
@@ -126,8 +126,8 @@ int main() {
     std::cout << "" << std::endl;
 
 // chess 4
-    if (((attackingChessField.first == pownedChessField.first)||
-         (attackingChessField.second == pownedChessField.second))||
+    if (((attackingChessField.first == pownedChessField.first) ||
+         (attackingChessField.second == pownedChessField.second)) ||
         (abs(attackingChessField.first - attackingChessField.second) ==
          abs(pownedChessField.first - pownedChessField.second)))
     {
@@ -149,8 +149,8 @@ int main() {
     {
         pawnStep = 1;
     }
-    if ((attackingChessField.second == pownedChessField.second)&&
-        ((attackingChessField.first + pawnStep == pownedChessField.first)||
+    if ((attackingChessField.second == pownedChessField.second) &&
+        ((attackingChessField.first + pawnStep == pownedChessField.first) ||
          (attackingChessField.first + 1 == pownedChessField.first)))
     {
         std::cout << "chess5.1) True." << std::endl;
@@ -161,9 +161,9 @@ int main() {
     }
     std::cout << "" << std::endl;
 // chess 5.2
-    if (((attackingChessField.first + 1 == pownedChessField.first)&&
-         (attackingChessField.second + 1 == pownedChessField.second))||
-        (attackingChessField.first - 1 == pownedChessField.first)&&
+    if (((attackingChessField.first + 1 == pownedChessField.first) &&
+         (attackingChessField.second + 1 == pownedChessField.second)) ||
+        (attackingChessField.first - 1 == pownedChessField.first) &&
         (attackingChessField.second + 1 == pownedChessField.second))
     {
         std::cout << "chess5.2) True." << std::endl;
