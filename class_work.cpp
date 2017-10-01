@@ -22,10 +22,11 @@ int main() {
 
 // num2
     std::cout << "2) Only one number is less than 20:   ";
-    if ((x < 20) && (y > 20)||(x > 20) && (y < 20))
+    if ((x < 20) && (y > 20) || (x > 20) && (y < 20))
     {
         std::cout << "True." << std::endl;
-    } else
+    }
+    else
     {
         std::cout << "False." << std::endl;
     }
