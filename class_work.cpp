@@ -18,7 +18,7 @@ int main() {
     {
         std::cout << "False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // num2
     std::cout << "2) Only one number is less than 20:   ";
@@ -30,7 +30,7 @@ int main() {
     {
         std::cout << "False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // num3
     std::cout << "3) At least one of the numbers is 0:   ";
@@ -42,7 +42,7 @@ int main() {
     {
         std::cout << "False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // num4
     std::cout << "4) Each of the numbers is negative:   ";
@@ -54,7 +54,7 @@ int main() {
     {
         std::cout << "False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // num5
     std::cout << "5) Only one of the numbers is a multiple of five:   ";
@@ -68,7 +68,7 @@ int main() {
     {
         std::cout << "False" << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // num6
     std::cout << "6) at least one of the numbers is greater than 100:   ";
@@ -80,7 +80,7 @@ int main() {
     {
         std::cout << "False" << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // chess initialization:
     std::pair<int, int> attackingChessField;
@@ -100,7 +100,7 @@ int main() {
     {
         std::cout << "chess1) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // chess 2
     if (std::abs(attackingChessField.first - attackingChessField.second) ==
@@ -112,7 +112,7 @@ int main() {
     {
         std::cout << "chess2) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // chess 3
     if (std::abs((attackingChessField.first - pownedChessField.first) == 1) ||
@@ -124,7 +124,7 @@ int main() {
     {
         std::cout << "chess3) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // chess 4
     if (((attackingChessField.first == pownedChessField.first) ||
@@ -138,7 +138,7 @@ int main() {
     {
         std::cout << "chess4) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // chess 5.1
     int pawnStep = 0;
@@ -160,7 +160,7 @@ int main() {
     {
         std::cout << "chess5.1) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 // chess 5.2
     if (((attackingChessField.first + 1 == pownedChessField.first) &&
          (attackingChessField.second + 1 == pownedChessField.second)) ||
@@ -173,7 +173,7 @@ int main() {
     {
         std::cout << "chess5.2) False." << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // задачи на цикл:
 // 1
@@ -181,7 +181,7 @@ int main() {
     {
         std::cout << i << " x 7 = " << i*7 << std::endl;
     }
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // 2
     int composition8x15 = 1;
@@ -190,7 +190,7 @@ int main() {
         composition8x15 *= i;
     }
     std::cout << "The composition btw 8x9x10x..x15 = " << composition8x15 << std::endl;
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // 3
     int a = 0;
@@ -202,7 +202,7 @@ int main() {
         composition21xa *= i;
     }
     std::cout << "The composition btw " << a << "x...x20 = " << composition21xa << std::endl;
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // 4
     int b = 0;
@@ -214,7 +214,7 @@ int main() {
         composition1xb *= i;
     }
     std::cout << "The composition btw " << "1x...x" << b << " = "<< composition1xb << std::endl;
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
 
 // 5
     std::cout << "Enter start and end numbers: ";
@@ -225,6 +225,6 @@ int main() {
         compositionaxb *= i;
     }
     std::cout << "The composition btw " << a << "x...x" << b << " = "<< compositionaxb << std::endl;
-    std::cout << "" << std::endl;
+    std::cout << std::endl;
     return 0;
 }
