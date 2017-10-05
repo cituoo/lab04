@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 int main() {
 // initialization
     int x = 0;
@@ -22,7 +22,7 @@ int main() {
 
 // num2
     std::cout << "2) Only one number is less than 20:   ";
-    if ((x < 20) && (y > 20) || (x > 20) && (y < 20))
+    if (((x < 20) && (y > 20)) || ((x > 20) && (y < 20)))
     {
         std::cout << "True." << std::endl;
     }
@@ -58,8 +58,8 @@ int main() {
 
 // num5
     std::cout << "5) Only one of the numbers is a multiple of five:   ";
-    if (((x % 5 == 0) && (y % 5 != 0) && (z % 5 != 0))||
-        ((x % 5 != 0) && (y % 5 == 0) && (z % 5 != 0))||
+    if (((x % 5 == 0) && (y % 5 != 0) && (z % 5 != 0)) ||
+        ((x % 5 != 0) && (y % 5 == 0) && (z % 5 != 0)) ||
         ((x % 5 == 0) && (y % 5 == 0) && (z % 5 != 0)))
     {
         std::cout << "True." << std::endl;
@@ -91,7 +91,7 @@ int main() {
     std::cin >> pownedChessField.first >> pownedChessField.second;
 
 // chess 1:
-    if ((attackingChessField.first == pownedChessField.first)||
+    if ((attackingChessField.first == pownedChessField.first) ||
         (attackingChessField.second == pownedChessField.second))
     {
         std::cout << "chess1) True." << std::endl;
@@ -129,7 +129,7 @@ int main() {
 // chess 4
     if (((attackingChessField.first == pownedChessField.first) ||
          (attackingChessField.second == pownedChessField.second)) ||
-         (std::abs(attackingChessField.first - attackingChessField.second) ==
+        (std::abs(attackingChessField.first - attackingChessField.second) ==
          std::abs(pownedChessField.first - pownedChessField.second)))
     {
         std::cout << "chess4) True." << std::endl;
